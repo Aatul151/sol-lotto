@@ -1,0 +1,30 @@
+@import "breakpoints";
+@import "typography";
+@import "input";
+@import "layout";
+@import "../container/container.scss";
+@import "../font/font.scss";
+@import "../theme";
+@import "../button/button";
+@import "../input/input";
+
+.default-wrapper-design {
+    background-image: url("../../public/assets/images/page-banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100vh;
+}
+
+.layout {
+    display: flex;
+
+    .layout-sidebar {
+        width: 212px;
+    }
+
+    .children-layout {
+        width: calc(100% - 212px);
+    }
+}

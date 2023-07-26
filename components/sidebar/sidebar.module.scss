@@ -1,0 +1,44 @@
+@import '../../scss/mixins/index.scss';
+
+.sidebardesign {
+    border-right: 1px solid $theme-sidebar-border-color;
+    height: calc(100vh - 82px);
+    background: $theme-page-background-color;
+    position: relative;
+    z-index: 9;
+
+    .alignment {
+        padding: 22px 16px;
+
+        .iconText {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            cursor: pointer;
+            padding: 0 0 25px 0;
+
+            &:hover {
+                .text {
+                    span {
+                        color: $theme-sidebar-hover-text-color;
+                        transition: 0.3s ease-in-out;
+                    }
+                }
+            }
+
+            .icon {
+                display: flex;
+                align-items: center;
+            }
+
+            .text {
+                span {
+                    display: block;
+                    transition: 0.3s ease-in-out;
+                    @include font14;
+                    color: $theme-sidebar-text-color;
+                }
+            }
+        }
+    }
+}

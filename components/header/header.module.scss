@@ -1,0 +1,60 @@
+@import '../../scss/mixins/index.scss';
+
+.header {
+    border-bottom: 1px solid $theme-header-border-color;
+    padding: 15px;
+
+    .headeralignment {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo  {
+            img {
+                cursor: pointer;
+            }
+        }
+
+        .twocontnetAlignment {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+
+            .profilecontnet {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .contnet {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+                    cursor: pointer;
+                    p {
+                        @include heading12;
+                        color: $theme-header-text-color;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        .notification {
+            padding-right: 10px;
+            border-right: 1px solid $theme-header-divider-color;
+        }
+
+        .rightcontnet {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+
+            a {
+                color: $theme-header-text-color;
+                cursor: pointer;
+                @include heading14;
+            }
+        }
+    }
+}
